@@ -12,58 +12,87 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1> Workout Tracker</h1>
-
-      <section>
+      <h1 class='all-title'> Workout Tracker</h1>
+    <section>
+        <h5 class='all-title'>Sign Up:</h5>
         <form id="sign-up-form">
-          <h5>Sign Up:</h5>
-          <p id="message"></p>
-          <input id= "sign-up-email" name="credentials[email]" type="email" placeholder="Email"><br>
-          <input id= "sign-up-password" name="credentials[password]" type="password" placeholder="Password"><br>
-          <input id= "sign-up-password_confirmation" name="credentials[password_confirmation]" type="password" placeholder="Re-enter Password"><br><br>
-          <input type="submit" value="Sign up"><br><br>
+
+          <input id= "sign-up-email" name="credentials[email]" type="email" placeholder="Email">
+          <input id= "sign-up-password" name="credentials[password]" type="password" placeholder="Password">
+          <input id= "sign-up-password_confirmation" name="credentials[password_confirmation]" type="password" placeholder="Re-enter Password"><br>
+          <input type="submit" value="Sign up"><br>
         </form>
+        <p id="message"></p>
     </section>
     <br>
       <section>
+        <h5 class='all-title'>Sign In:</h5>
             <form id="sign-in-form">
-              <h5>Sign In:</h5>
-              <!-- <p id="message2"></p> -->
-              <input id= "sign-in-email" name="credentials[email]" type="email" placeholder="Email"><br>
-              <input id= "sign-in-password"name="credentials[password]" type="password" placeholder="Passwords"><br><br>
-              <input type="submit" value="Sign In">
+              <input id= "sign-in-email" name="credentials[email]" type="email" placeholder="Email">
+              <input id= "sign-in-password"name="credentials[password]" type="password" placeholder="Passwords"><br>
+              <input type="submit" value="Sign In"><br>
             </form>
             <p id="message2"></p>
       </section>
             <br>
             <section>
+        <h5 class='all-title'>Change Password:</h5>
         <form id="change-password-form">
-          <h5>Change Password:</h5>
-          <p id="message3"></p>
-          <input id="cp-old" name="passwords[old]" type="password" placeholder="Old Password"><br>
-          <input id="cp-new" name="passwords[new]" type="password" placeholder="New Password"><br><br>
-          <input type="submit" value="Change Password"><br><br>
+
+          <input id="cp-old" name="passwords[old]" type="password" placeholder="Old Password">
+          <input id="cp-new" name="passwords[new]" type="password" placeholder="New Password"><br>
+          <input type="submit" value="Change Password"><br>
         </form>
+          <p id="message3"></p>
     </section>
             <br>
     <section>
+      <h5 class='all-title'>Tracker:</h5>
         <form id="tracker">
-          <h5>Tracker:</h5>
-          <p id="message4"></p>
-          <input id= "exercise" name="exercise" type="text" placeholder="Exercise"><br>
-          <input id= "weight" name="weight" type="text" placeholder="Weights"><br>
-          <input id= "sets" name="sets" type="text" placeholder="Sets"><br>
-          <input id= "target" name="target" type="text" placeholder="Targeted Muscles"><br><br>
-          <input type="submit" value="submit"><br><br>
+
+          <input id= "exercise" name="tracker[exercise]" type="text" placeholder="Exercise">
+          <input id= "weight" name="tracker[weight]" type="text" placeholder="Weights">
+          <input id= "sets" name="tracker[sets]" type="text" placeholder="Sets">
+          <input id= "target" name="tracker[target_muscle]" type="text" placeholder="Targeted Muscles"><br>
+          <input type="submit" value="submit"><br>
+        </form>
+        <p id="message4"></p>
+    </section>
+    <br>
+    <section>
+      <div id="record">
+        <h5 class='all-title'>Records:</h5>
+        <button type="button">See All Your Records</button>
+        <div id='sawRecords'>
+        </div>
+      </div>
+    </section>
+    <br>
+    <section>
+      <h5 class='all-title'>Update Records:</h5>
+      <form id="update">
+        <input id= "exercise-update" name="tracker[exercise]" type="text" placeholder="Update exercise">
+        <input id= "weight-update" name="tracker[weight]" type="text" placeholder="Update weights">
+        <input id= "sets-update" name="tracker[sets]" type="text" placeholder="Update sets">
+        <input id= "target-update" name="tracker[target]" type="text" placeholder="Update targeted Muscles"><br>
+        <input type="submit" value="submit"><br>
+      </form>
+      <p id="message5"></p>
+    </section>
+    <br>
+    <section>
+        <h5 class='all-title'>Delete Records:</h5>
+        <form id="remove">
+        <button type="button">Delete records</button>
         </form>
     </section>
-            <br>
+    <br>
     <section>
         <form id="sign-out-form">
-          <p id="message5"></p>
+
         <input type="submit" value="Sign Out">
         </form>
+        <p id="message6"></p>
     </section>
-            <br>
     </body>
 </html>

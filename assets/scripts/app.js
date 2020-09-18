@@ -13,4 +13,7 @@ $(() => {
   $('#change-password-form').on('submit', authEvents.onChangePassword)
   $('#sign-out-form').on('submit', authEvents.onSignOut)
   $('#tracker').on('submit', trackerEvents.onTracker)
+  $('#record').on('click', trackerEvents.onRecord)
+  $('#update').on('submit', trackerEvents.onTracker)
+  $('#remove').on('submit', trackerEvents.onTracker)
 })
