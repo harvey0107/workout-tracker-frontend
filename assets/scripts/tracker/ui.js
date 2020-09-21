@@ -18,19 +18,19 @@ const onRecordSuccess = function (response) {
   $('#message').text('Check your records!')
   $('#message').hide()
   trackerStore.user = response.user
-  console.log(response)
+  console.log('response is', response)
   const recordlist = response.tracker
   let sendhtml = '<ol>'
   recordlist.forEach(data => {
     sendhtml += `<li id=${data._id}> Exercis:${data.exercise}
     \n Weight: ${data.weight} \n Target Muscle: ${data.target_muscle}
-    \n Sets: ${data.sets} </li>`
+    \n Sets: ${data.sets} \n </li>`
     return sendhtml
   })
   sendhtml += '</ol>'
   console.log(recordlist)
   $('#sawRecords').html(sendhtml)
-  $('#sawRecords').hide(100000)
+  //$('#sawRecords').hide(100000)
 }
 
 const onRecordFailure = function () {

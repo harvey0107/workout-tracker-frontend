@@ -6,6 +6,7 @@ const onTracker = function (event) {
   event.preventDefault()
   const form = event.target
   const data = getFormFields(form)
+  console.log('data in event', data)
   trackerapi.tracker(data)
     .then(trackerui.onTrackerSuccess)
     .catch(trackerui.onTrackerFailure)

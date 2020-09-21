@@ -14,16 +14,20 @@
 }
 
 #trackertitle {
-font-size: 60px;
-color: black;
+font-size: 50px;
+font-weight: bolder;
+color: rgb(89,89,89);
 text-align: center;
 }
 
 #subtitle {
-font-size: 15px;
-color: black;
+font-size: 20px;
+font-weight: bold;
+color: rgb(122,122,122);
 text-align: center;
 font-style: oblique;
+justify-content: center;
+display: flex;
 }
 
 #message{
@@ -92,4 +96,14 @@ body {
   align-items: center;
   justify-content: center;
   display: grid;
+}
+
+#footer {
+  font-size: 17px;
+  font-weight: lighter;
+  color: white;
+  text-align: center;
+  font-style: oblique;
+  justify-content: center;
+  display: flex;
 }

@@ -3,6 +3,7 @@ const trackerConfig = require('./../config')
 const trackerStore = require('./../store')
 
 const tracker = function (data) {
+  console.log('data is' + data)
   return $.ajax({
     url: trackerConfig.apiUrl + '/tracker',
     method: 'POST',
@@ -18,6 +19,7 @@ const record = function (data) {
     headers: {
       Authorization: 'Bearer ' + trackerStore.user.token
     }
+    // data:
   })
 }
 
