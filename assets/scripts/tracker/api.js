@@ -23,18 +23,16 @@ const record = function (data) {
 
 const update = function (data) {
   return $.ajax({
-    url: trackerConfig.apiUrl + '/update',
+    url: trackerConfig.apiUrl + '/tracker/' + trackerStore.tracker._id,
     method: 'PATCH',
-    headers: {
-      Authorization: 'Bearer ' + trackerStore.user.token
-    },
+    headers: { Authorization: 'Bearer ' + trackerStore.user.token },
     data: data
   })
 }
 
-const remove = function (data) {
+const remove = function (trackerId) {
   return $.ajax({
-    url: trackerConfig.apiUrl + '/remove',
+    url: trackerConfig.apiUrl + '/tracker',
     method: 'DELETE',
     headers: {
       Authorization: 'Bearer ' + trackerStore.user.token

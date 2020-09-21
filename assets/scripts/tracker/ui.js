@@ -1,17 +1,22 @@
 const trackerStore = require('../store')
 
 const onTrackerSuccess = function (response) {
-  $('#message2').show()
-  $('#message2').text('Nice workout' + response.user)
+  $('#message').show()
+  $('#message').text('Nice workout')
   $('#tracker').trigger('reset')
+  $('#message').hide()
 }
 const onTrackerFailure = function () {
-  $('#message2').show()
-  $('#message2').text('Failed!')
+  $('#message').show()
+  $('#message').text('Failed!')
   $('#tracker').trigger('reset')
+  $('#message').hide()
 }
 
 const onRecordSuccess = function (response) {
+  $('#message').show()
+  $('#message').text('Check your records!')
+  $('#message').hide()
   trackerStore.user = response.user
   console.log(response)
   const recordlist = response.tracker
@@ -24,42 +29,39 @@ const onRecordSuccess = function (response) {
   })
   sendhtml += '</ol>'
   console.log(recordlist)
-  // recordlist.forEach(val => )
   $('#sawRecords').html(sendhtml)
-  /* $('#message2').show()
-  $('#message2').text('Nice to see you again ' + response.user.email)
-  $('#sign-in-form').trigger('reset')
-  $('#change-password-form').show()
-  $('#sign-out-form').show()
-  $('#start-game').show()
-  $('#sign-in-form').hide()
-  $('#sign-up-form').hide()
-  $('#message2').hide(6000) */
+  $('#sawRecords').hide(100000)
 }
 
 const onRecordFailure = function () {
-  /* $('#message2').show()
-  $('#message2').text('Oops, Try again!')
-  $('#sign-in-form').trigger('reset') */
+  $('#message').show()
+  $('#message').text('Oops, Try again!')
+  $('#sign-in-form').trigger('reset')
 }
 
 const onUpdateSuccess = function () {
-  /* $('#message3').show()
-  $('#message3').text('Changed password successfully')
-  $('#change-password-form').trigger('reset')
-  $('#message3').hide(6000) */
+  $('#message').show()
+  $('#message').text('Workout have been updated successfully')
+  $('#update').trigger('reset')
+  $('#message').hide(6000)
 }
 const onUpdateFailure = function () {
-  /* $('#message3').show()
-  $('#message3').text('Error')
-  $('#change-password-form').trigger('reset')
-  $('#message3').hide(6000) */
+  $('message').show()
+  $('#message').text('Error')
+  $('#update').trigger('reset')
+  $('#message').hide(6000)
 }
 
 const onRemoveSuccess = function () {
+  $('message').show()
+  $('#message').text('Record have been removed successfully')
+  $('message').hide(6000)
 }
 
 const onRemoveFailure = function () {
+  $('message').show()
+  $('#message').text('Record was not removed!')
+  $('message').hide(6000)
 }
 
 module.exports = {

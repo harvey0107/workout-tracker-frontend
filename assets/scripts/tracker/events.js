@@ -28,7 +28,10 @@ const onUpdate = function (event) {
 
 const onRemove = function (event) {
   event.preventDefault()
-  trackerapi.remove()
+  const form = event.target
+  const data = getFormFields(form)
+  const trackerId = data.tracker.id
+  trackerapi.remove(trackerId)
     .then(trackerui.onRemoveSuccess)
     .catch(trackerui.onRemoveFailure)
 }
