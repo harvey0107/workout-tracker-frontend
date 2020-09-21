@@ -17,20 +17,18 @@ const onRecordSuccess = function (response) {
   $('#message').show()
   $('#message').text('Check your records!')
   $('#message').hide()
-  trackerStore.user = response.user
-  console.log('response is', response)
+  // trackerStore.user = response.user
   const recordlist = response.tracker
   let sendhtml = '<ol>'
   recordlist.forEach(data => {
     sendhtml += `<li id=${data._id}> Exercis:${data.exercise}
     \n Weight: ${data.weight} \n Target Muscle: ${data.target_muscle}
-    \n Sets: ${data.sets} \n </li>`
+    \n Sets: ${data.sets} \n trackerId: ${data._id}</li>`
     return sendhtml
   })
   sendhtml += '</ol>'
-  console.log(recordlist)
   $('#sawRecords').html(sendhtml)
-  //$('#sawRecords').hide(100000)
+  // $('#sawRecords').hide(100000)
 }
 
 const onRecordFailure = function () {
@@ -55,6 +53,7 @@ const onUpdateFailure = function () {
 const onRemoveSuccess = function () {
   $('message').show()
   $('#message').text('Record have been removed successfully')
+  $('#remove').trigger('reset')
   $('message').hide(6000)
 }
 

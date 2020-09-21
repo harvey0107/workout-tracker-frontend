@@ -15,7 +15,7 @@ $(() => {
   $('#tracker').on('submit', trackerEvents.onTracker)
   $('#record').on('click', trackerEvents.onRecord)
   $('#update').on('submit', trackerEvents.onUpdate)
-  $('#remove').on('submit', trackerEvents.onRecord)
+  $('#remove').on('submit', trackerEvents.onRemove)
   $('#change-password-form').hide()
   $('#sign-out-form').hide()
   $('#tracker').hide()

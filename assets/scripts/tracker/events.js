@@ -32,6 +32,7 @@ const onRemove = function (event) {
   const form = event.target
   const data = getFormFields(form)
   const trackerId = data.tracker.id
+  console.log('this is trackerid', trackerId)
   trackerapi.remove(trackerId)
     .then(trackerui.onRemoveSuccess)
     .catch(trackerui.onRemoveFailure)

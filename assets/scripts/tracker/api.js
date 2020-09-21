@@ -25,16 +25,23 @@ const record = function (data) {
 
 const update = function (data) {
   return $.ajax({
-    url: trackerConfig.apiUrl + '/tracker/' + trackerStore.tracker._id,
+    url: trackerConfig.apiUrl + '/tracker/' + data.tracker.id,
     method: 'PATCH',
     headers: { Authorization: 'Bearer ' + trackerStore.user.token },
-    data: data
+    data: {
+      tracker: {
+        exercise: data.tracker.exercise,
+        weight: data.tracker.weight,
+        target_muscle: data.tracker.target_muscle,
+        sets: data.tracker.sets
+      }
+    }
   })
 }
 
 const remove = function (trackerId) {
   return $.ajax({
-    url: trackerConfig.apiUrl + '/tracker',
+    url: trackerConfig.apiUrl + '/tracker/' + trackerId,
     method: 'DELETE',
     headers: {
       Authorization: 'Bearer ' + trackerStore.user.token
