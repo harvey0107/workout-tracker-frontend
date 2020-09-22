@@ -1,4 +1,4 @@
-const trackerStore = require('../store')
+// const trackerStore = require('../store')
 
 const onTrackerSuccess = function (response) {
   $('#message').show()
