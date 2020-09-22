@@ -6,8 +6,8 @@
 
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-      <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
-
+      <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
@@ -22,19 +22,19 @@
     <section>
           <form id="sign-up-form">
           <h5 class='all-title'>Sign Up:</h5>
-          <input id= "sign-up-email" name="credentials[email]" type="email" placeholder="Email">
-          <input id= "sign-up-password" name="credentials[password]" type="password" placeholder="Password">
-          <input id= "sign-up-password_confirmation" name="credentials[password_confirmation]" type="password" placeholder="Re-enter Password"><br>
-          <input type="submit" value="Sign up"><br>
+          <input id= "sign-up-email" name="credentials[email]" type="email" placeholder="Email" class="form-control form-control-sm">
+          <input id= "sign-up-password" name="credentials[password]" type="password" placeholder="Password" class="form-control form-control-sm">
+          <input id= "sign-up-password_confirmation" name="credentials[password_confirmation]" type="password" placeholder="Re-enter Password" class="form-control form-control-sm"><br>
+          <input type="submit" class="btn btn-info" value="Sign up"><br>
         </form>
     </section>
     <br>
       <section>
               <form id="sign-in-form">
               <h5 class='all-title'>Sign In:</h5>
-              <input id= "sign-in-email" name="credentials[email]" type="email" placeholder="Email">
-              <input id= "sign-in-password"name="credentials[password]" type="password" placeholder="Passwords"><br>
-              <input type="submit" value="Sign In"><br>
+              <input id= "sign-in-email" name="credentials[email]" type="email" placeholder="Email" class="form-control form-control-sm">
+              <input id= "sign-in-password"name="credentials[password]" type="password" placeholder="Passwords" class="form-control form-control-sm"><br>
+              <input type="submit" value="Sign In" class="btn btn-info"><br>
             </form>
 
       </section>
@@ -43,9 +43,9 @@
 
         <form id="change-password-form">
           <h5 class='all-title'>Change Password:</h5>
-          <input id="cp-old" name="passwords[old]" type="password" placeholder="Old Password">
-          <input id="cp-new" name="passwords[new]" type="password" placeholder="New Password"><br>
-          <input type="submit" value="Change Password"><br>
+          <input id="cp-old" name="passwords[old]" type="password" placeholder="Old Password" class="form-control form-control-sm">
+          <input id="cp-new" name="passwords[new]" type="password" placeholder="New Password" class="form-control form-control-sm">
+          <input type="submit" value="Change Password" class="btn btn-info"><br>
         </form>
 
       </section>
@@ -54,11 +54,11 @@
 
         <form id="tracker">
           <h5 class='all-title'>Tracker:</h5>
-          <input id= "exercise" name="tracker[exercise]" type="text" placeholder="Exercise">
-          <input id= "weight" name="tracker[weight]" type="text" placeholder="Weights">
-          <input id= "sets" name="tracker[sets]" type="text" placeholder="Sets">
-          <input id= "target" name="tracker[target_muscle]" type="text" placeholder="Targeted Muscles"><br>
-          <input type="submit" value="submit"><br>
+          <input id= "exercise" name="tracker[exercise]" type="text" placeholder="Exercise" class="form-control form-control-sm">
+          <input id= "weight" name="tracker[weight]" type="text" placeholder="Weights" class="form-control form-control-sm">
+          <input id= "sets" name="tracker[sets]" type="text" placeholder="Sets" class="form-control form-control-sm">
+          <input id= "target" name="tracker[target_muscle]" type="text" placeholder="Targeted Muscles" class="form-control form-control-sm">
+          <input type="submit" value="Submit" class="btn btn-info"><br>
         </form>
 
     </section>
@@ -66,7 +66,7 @@
     <section>
         <div id="record">
         <h5 class='all-title'>Records:</h5>
-        <button type="button">See All Your Records</button>
+        <button type="button" class="btn btn-info">See All Your Records</button>
         <div id='sawRecords'>
         </div>
       </div>
@@ -75,12 +75,12 @@
     <section>
         <form id="update">
         <h5 class='all-title'>Update Records:</h5>
-        <input id= "updateid" name="tracker[id]" type="text" placeholder="Tracker ID">
-        <input id= "exercise-update" name="tracker[exercise]" type="text" placeholder="Update exercise">
-        <input id= "weight-update" name="tracker[weight]" type="text" placeholder="Update weights">
-        <input id= "sets-update" name="tracker[sets]" type="text" placeholder="Update sets">
-        <input id= "target-update" name="tracker[target_muscle]" type="text" placeholder="Update targeted Muscles"><br>
-        <input type="submit" value="submit"><br>
+        <input id= "updateid" name="tracker[id]" type="text" placeholder="Tracker ID" class="form-control form-control-sm">
+        <input id= "exercise-update" name="tracker[exercise]" type="text" placeholder="Update exercise" class="form-control form-control-sm">
+        <input id= "weight-update" name="tracker[weight]" type="text" placeholder="Update weights" class="form-control form-control-sm">
+        <input id= "sets-update" name="tracker[sets]" type="text" placeholder="Update sets" class="form-control form-control-sm">
+        <input id= "target-update" name="tracker[target_muscle]" type="text" placeholder="Update targeted Muscles" class="form-control form-control-sm">
+        <input type="submit" value="Submit" class="btn btn-info"><br>
       </form>
 
     </section>
@@ -88,14 +88,14 @@
     <section>
         <form id="remove">
         <h5 class='all-title'>Delete Records:</h5>
-        <input type="text" placeholder="Tracker ID" name="tracker[id]" />
-          <input type="submit" value="submit">
+        <input type="text" placeholder="Tracker ID" name="tracker[id]" class="form-control form-control-sm">
+          <input type="submit" value="Submit" class="btn btn-info">
         </form>
     </section>
     <br>
     <section>
         <form id="sign-out-form">
-        <input type="submit" value="Sign Out">
+        <input type="submit" class="btn btn-info" value="Sign Out">
         </form>
 
     </section>
