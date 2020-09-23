@@ -63,7 +63,7 @@ const onSignOutSuccess = function () {
   $('#record').hide()
   $('#remove').hide()
   $('#message').text('See you later')
-  $('#message').hide(6000)
+  $('#message').hide(10000)
 }
 const onSignOutFailure = function () {
   $('#message').text('Oops')
